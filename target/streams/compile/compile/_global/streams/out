@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/home/pedro/Desktop/UnB/TP2/HollywoodStyle/src/main/scala/HelloWorld.scala:19:52: Any does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        _load_event_handlers.map(handler => handler(pathToFile))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pedro/Desktop/UnB/TP2/HollywoodStyle/src/main/scala/HelloWorld.scala:20:54: Any does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        _dowork_event_handlers.map(handler => handler())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pedro/Desktop/UnB/TP2/HollywoodStyle/src/main/scala/HelloWorld.scala:21:51: Any does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        _end_event_handlers.map(handler => handler())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
