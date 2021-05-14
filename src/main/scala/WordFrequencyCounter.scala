@@ -1,20 +1,28 @@
-class WordFrequencyCounter {
-    _wordFreqs : Object = _
-    def WordFrequencyCounter(wfapp, dataStorage) {
-        dataStorage.registerForWordEvent(incrementCount)
-        wfapp.registerForEndEvent(printFreqs)
-    }
+import wfapp.WordFrequencyFramework
+import dataStorage.DataStorage
 
-    def incrementCount(word) {
-        if(word in _wordFreqs) {
-            _wordFreqs += 1
-        }else {
-            _wordFreqs = 1
+object EndObject {
+    def printFreqs() {
+        // TODO ordenar
+        for((word, freq) <- _wordFreqs) {
+            println(word + "- " + freq)
+        }
+    }
+}
+
+class WordFrequencyCounter(wfapp: WordFrequencyFramework, dataStorage: DataStorage) {
+    val _wordFreqs = collection.mutable.Map[String, Int]()
+
+    dataStorage.registerForWordEvent(incrementCount)
+    wfapp.registerForEndEvent(EndObject.printFreqs())
+
+    def incrementCount(word: String) {
+        if(_wordFreqs.contains(word)) {
+            _wordFreqs[word]++
+        } else {
+            _wordFreqs.put(word, 1)
         }
     }
 
-    def printFreqs() {
-        // TODO terminar
-        wordFreqs = 
-    }
+
 }

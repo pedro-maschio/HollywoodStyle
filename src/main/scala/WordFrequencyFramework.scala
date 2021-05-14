@@ -1,25 +1,50 @@
+package wfapp 
+
+trait LoadEvent {
+    def load(filename: String)
+}
+
+trait DoWorkEvent {
+    def produce_words()
+}
+
+trait EndWorkEvent {
+    def printFreqs()
+}
+
 class WordFrequencyFramework() {
-    var _loadEventHandlers : List[Any] = _
-    var _doworkEventHandlers : List[Any] = _
+    var _loadEventHandlers : List[LoadEvent] = _
+    var _doworkEventHandlers : List[DoWorkEvent] = _
     var _endEventHandlers : List[Any] = _
 
-    def registerForLoadEvent(handler: Any): Unit = {
+    def registerForLoadEvent(handler: LoadEvent): Unit = {
         _loadEventHandlers = _loadEventHandlers :+ handler
     }
 
-    def registerForDoWorkEvent(handler: Any): Unit = {
+    def registerForDoWorkEvent(handler: DoWorkEvent): Unit = {
         _doworkEventHandlers = _doworkEventHandlers :+ handler
     }
 
-    def registerForEndEvent(handler: Any): Unit = {
+    def registerForEndEvent(handler: EndWorkEvent): Unit = {
         _endEventHandlers = _endEventHandlers :+ handler
     }
 
     def run(pathToFile: String): Unit = {
         // TODO verificar lista de funções
-        _loadEventHandlers.map(handler => handler(pathToFile))
-        _doworkEventHandlers.map(handler => handler())
-        _endEventHandlers.map(handler => handler())
+
+        for(elemento <- _loadEventHandlers) {
+            elemento.load(pathToFile)
+        }
+        for(elemento <- _doworkEventHandlers) {
+            elemento.produce_words()
+        }
+        for(elemento <- _endEventHandlers) {
+        
+        }
+
+        // _loadEventHandlers.map(handler => handler(pathToFile))
+        // _doworkEventHandlers.map(handler => handler())
+        // _endEventHandlers.map(handler => handler())
     }
 }
 

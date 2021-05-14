@@ -1,34 +1,47 @@
 import scala.io.Source
 import scala.util.matching.Regex
+import wfapp.WordFrequencyFramework
 
-class DataStorage {
-    _data : String = _
-    _stopWordFilter : String = _
-    _wordEventHandlers : List[Any] = _
 
-    def DataStorage(wfapp, stopWordFilter) {
-        this._stopWordFilter = stopWordFilter
-        wfapp.registerForLoadEvent()
-        wfapp.registerForDoWorkEvent()
-    }
+trait WordEvent {
+    def incrementCount(word: String)
+}
 
-    def load() {
+object LoadObject {
+    def load(pathToFile: String) {
         val filename = "t.txt"
-        _data = Source.fromFile(filename).getLines.mkString
-        val pattern = "[\W_]+".r
-        _data = (pattern replaceAllIn(_data, ' ')).toLowerCase()
+        var d = pathToFile
+        d = Source.fromFile(filename).getLines.mkString
+        val pattern = "[\\W_]+".r
+        d = (pattern.replaceAllIn(d, " ")).toLowerCase()
     }
+}
 
-    def produce_words() {
+object WorkObject {
+    def produce_words(_data: String, _stopWordFilter: StopWordFilter) {
         // TODO terminar
-        data_str = _data.mkString(",")
-        for word in data_str.split() {
-            if(!_stopWordFilter.isStopWord(w)) {
+        var data_str = _data.mkString(",")
+        for(word <- data_str.split(' ')) {
+            if(!_stopWordFilter.isStopWord(word)) {
+
             }
         }
     }
+}
 
-    def registerForWordEvent(handler) {
+class DataStorage(wfapp: WordFrequencyFramework, stopWordFilter: StopWordFilter) {
+    val _data : String
+    var _stopWordFilter : StopWordFilter 
+    val _wordEventHandlers : List[WordEvent]
+
+
+    _stopWordFilter = stopWordFilter
+
+    wfapp.registerForLoadEvent(LoadObject.load)
+    wfapp.registerForDoWorkEvent(WorkObject.produce_words(_,_))
+    
+
+    def registerForWordEvent(handler: WordEvent) {
         _wordEventHandlers :+ handler
     }
 
