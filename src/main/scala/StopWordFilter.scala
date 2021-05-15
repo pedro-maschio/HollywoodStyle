@@ -1,20 +1,15 @@
+package stopwords
+import objects._
 import wfapp.WordFrequencyFramework
 
-class StopWordFilter {
-    val _stopWords : List[String] 
+class StopWordFilter(wfapp: WordFrequencyFramework) {
+  var stopWords: List[String] = _
 
-    def StopWordFilter(wfapp: WordFrequencyFramework) {
-        wfapp.registerForLoadEvent(load)
-    }
+  val loadObject = new LoadObject()
+  wfapp.registerForLoadEvent(loadObject)
 
-    def load(ignore: String) {
-        val filename = "stop_words.txt"
-        _stopWords = Source.fromFile(filename).getLines.toList
-        // juntar a list de stopword com a, b, c, d, e ...
-    }
-    
-    def isStopWord(word: String): Boolean = {
-        _stopWords.contains(word)
-        
-    }
+  def isStopWord(word: String): Boolean = {
+    stopWords.contains(word)
+  }
+
 }

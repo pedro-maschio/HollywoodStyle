@@ -1,7 +1,41 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/pedro/Desktop/UnB/TP2/HollywoodStyle/target/scala-2.13/hollywoodstyle_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/hollywoodstyle_2.13-0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Hello.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/pedro/Desktop/UnB/TP2/HollywoodStyle/target/scala-2.13/classes/Hello.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Hello$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/pedro/Desktop/UnB/TP2/HollywoodStyle/target/scala-2.13/classes/Hello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	datastorage[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/datastorage[0m
+[0m[[0m[0mdebug[0m] [0m[0m	datastorage/DataStorage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/datastorage/DataStorage.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/LoadObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/LoadObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/EndObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/EndObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/DoWorkObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/DoWorkObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/WordEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/WordEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/DoWorkEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/DoWorkEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/LoadEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/LoadEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/EndWorkEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/EndWorkEvent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	objects/WordObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/objects/WordObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	wfapp[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/wfapp[0m
+[0m[[0m[0mdebug[0m] [0m[0m	wfapp/WordFrequencyFramework.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/wfapp/WordFrequencyFramework.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stopwords[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/stopwords[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stopwords/StopWordFilter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/stopwords/StopWordFilter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	wfc[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/wfc[0m
+[0m[[0m[0mdebug[0m] [0m[0m	wfc/WordFrequencyCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/wfc/WordFrequencyCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes/Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

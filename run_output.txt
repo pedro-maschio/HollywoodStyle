@@ -1,0 +1,22 @@
+[info] welcome to sbt 1.5.2 (Ubuntu Java 11.0.11)
+[info] loading project definition from /home/gustavo/Documents/HollywoodStyle/project
+[info] loading settings for project hollywoodstyle from build.sbt ...
+[info] set current project to HollywoodStyle (in build file:/home/gustavo/Documents/HollywoodStyle/)
+[info] compiling 1 Scala source to /home/gustavo/Documents/HollywoodStyle/target/scala-2.13/classes ...
+[error] /home/gustavo/Documents/HollywoodStyle/src/main/scala/Objects.scala:65:52: type mismatch;
+[error]  found   : Boolean(false)
+[error]  required: ((String, Int), (String, Int)) => Boolean
+[error]     val list = ListMap(wordFreqs.toSeq.sortWith(.2 > .2):*)
+[error]                                                    ^
+[error] /home/gustavo/Documents/HollywoodStyle/src/main/scala/Objects.scala:65:57: postfix operator :* needs to be enabled
+[error] by making the implicit value scala.language.postfixOps visible.
+[error] ----
+[error] This can be achieved by adding the import clause 'import scala.language.postfixOps'
+[error] or by setting the compiler option -language:postfixOps.
+[error] See the Scaladoc for value scala.language.postfixOps for a discussion
+[error] why the feature needs to be explicitly enabled.
+[error]     val list = ListMap(wordFreqs.toSeq.sortWith(.2 > .2):*)
+[error]                                                         ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 5 s, completed 14 de mai de 2021 20:36:54

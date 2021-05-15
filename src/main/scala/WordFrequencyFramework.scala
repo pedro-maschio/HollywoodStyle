@@ -1,55 +1,32 @@
-package wfapp 
+package wfapp
 
-trait LoadEvent {
-    def load(filename: String)
+import objects._
+import stopwords._
+import datastorage.DataStorage
+import wfc.WordFrequencyCounter
+
+class WordFrequencyFramework {
+  var loadEventHandler : List[LoadObject] = List()
+  var doWorkEventHandler: List[DoWorkObject] = List()
+  var endEventHandler: List[EndObject] = List()
+
+  def registerForLoadEvent(handler: LoadObject): Unit = {
+    loadEventHandler = loadEventHandler :+ handler
+  }
+
+  def registerForDoWorkEvent(handler: DoWorkObject): Unit = {
+    doWorkEventHandler = doWorkEventHandler :+ handler
+  }
+
+  def registerForEndEvent(handler: EndObject): Unit = {
+    endEventHandler = endEventHandler :+ handler
+  }
+
+  def run(pathToFile: String, stop : StopWordFilter, data: DataStorage, wordFreqCounter: WordFrequencyCounter): Unit = {
+    stop.stopWords = loadEventHandler(0).load()
+    data.data = loadEventHandler(1).load(pathToFile)
+
+    doWorkEventHandler(0).produce_words(data.data, stop, data.wordEventHandler, wordFreqCounter.wordFreqs)
+    endEventHandler(0).printFreqs(wordFreqCounter.wordFreqs)
+  }
 }
-
-trait DoWorkEvent {
-    def produce_words()
-}
-
-trait EndWorkEvent {
-    def printFreqs()
-}
-
-class WordFrequencyFramework() {
-    var _loadEventHandlers : List[LoadEvent] = _
-    var _doworkEventHandlers : List[DoWorkEvent] = _
-    var _endEventHandlers : List[Any] = _
-
-    def registerForLoadEvent(handler: LoadEvent): Unit = {
-        _loadEventHandlers = _loadEventHandlers :+ handler
-    }
-
-    def registerForDoWorkEvent(handler: DoWorkEvent): Unit = {
-        _doworkEventHandlers = _doworkEventHandlers :+ handler
-    }
-
-    def registerForEndEvent(handler: EndWorkEvent): Unit = {
-        _endEventHandlers = _endEventHandlers :+ handler
-    }
-
-    def run(pathToFile: String): Unit = {
-        // TODO verificar lista de funções
-
-        for(elemento <- _loadEventHandlers) {
-            elemento.load(pathToFile)
-        }
-        for(elemento <- _doworkEventHandlers) {
-            elemento.produce_words()
-        }
-        for(elemento <- _endEventHandlers) {
-        
-        }
-
-        // _loadEventHandlers.map(handler => handler(pathToFile))
-        // _doworkEventHandlers.map(handler => handler())
-        // _endEventHandlers.map(handler => handler())
-    }
-}
-
-// object Hello {
-//     def main(args: Array[String]) = {
-//         println("Hello, world")
-//     }
-// }
