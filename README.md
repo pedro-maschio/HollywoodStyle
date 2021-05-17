@@ -66,5 +66,6 @@ sbt
 E então execute o comando run, passando como argumento o caminho do arquivo txt contendo um texto o qual deseja-se contar as palavras. Para facilitar o uso, já incluímos na pasta do projeto o arquivo biblia-em-txt.txt para a execução.
 
 ```
-run ~/exemplo/texto.txt
+run /src/main/scala/biblia-em-txt.txt       # rodar o texto padrão
+run ~/exemplo/texto.txt                     # rodar o texto personalizado
 ```
