@@ -11,7 +11,7 @@ object Main {
     var dataStorage = new DataStorage(wfapp, stop)
     var wordFreqCounter = new WordFrequencyCounter(wfapp, dataStorage)
 
-    val filename = Paths.get("src/main/scala/biblia-em-txt.txt").toAbsolutePath.toString()
+    val filename = Paths.get("src/main/scala/" + args(0)).toAbsolutePath.toString()
 
     wfapp.run(filename, stop, dataStorage, wordFreqCounter)
   }
