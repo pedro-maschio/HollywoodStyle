@@ -15,7 +15,7 @@ pois muitos módulos podem registrar manipuladores para o mesmo evento.
 
 ## Implementação
 
-A linguagem escolhida foi **Scala**, utilizando o compilador **SBT**.
+A linguagem escolhida foi **Scala**, utilizando a ferramenta **sbt**.
 
 Os eventos do programa são divididos em três etapas: carregamento, execução e finalização,
 indicando início, execução e fim.
