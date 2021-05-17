@@ -1,4 +1,6 @@
-[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0)[0m
-[0m[[0m[33mwarn[0m] [0m[0m2 deprecations (since 2.13.3)[0m
-[0m[[0m[33mwarn[0m] [0m[0m6 deprecations in total; re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pedro/Desktop/UnB/TP2/HollywoodStyle/src/main/scala/Main.scala:16:15: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : java.net.URI[0m
+[0m[[0m[31merror[0m] [0m[0m required: String[0m
+[0m[[0m[31merror[0m] [0m[0m    wfapp.run(filename, stop, dataStorage, wordFreqCounter)[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

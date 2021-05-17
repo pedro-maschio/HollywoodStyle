@@ -4,6 +4,7 @@ import stopwords.StopWordFilter
 import scala.collection.mutable.Map
 import scala.util.matching.Regex
 import scala.collection.immutable.ListMap
+import java.nio.file.Paths
 
 trait LoadEvent {
   def load(filename: String): String
@@ -29,7 +30,7 @@ class LoadObject extends LoadEvent {
     (pattern.replaceAllIn(string, " ")).toLowerCase()
   }
   override def load(): List[String] = {
-    val filename = "/home/gustavo/Documents/HollywoodStyle/src/main/scala/stop_words.txt"
+    val filename = Paths.get("src/main/scala/stop_words.txt").toAbsolutePath.toUri()
     var stopList = Source.fromFile(filename).getLines.toList
     stopList
   }
